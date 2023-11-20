@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Introduccion a python",
+    "salon": "102",
+    "fecha_incio": "",
+    "fecha_fin": "",
+    "horas": 72,
+    "unidades": [
+      {
+        "name": "Primeros pasos",
+        "cant_temas": 6
+      },
+      {
+        "name": "Condicionales",
+        "cant_temas": 7
+      },
+      {
+        "name": "Estructuras de datos",
+        "cant_temas": 2
+      }
+    ]
+  }
+]

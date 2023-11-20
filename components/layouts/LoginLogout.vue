@@ -21,7 +21,7 @@ const logoutUser = async () => {
 <template>
   <Dialog
     id="logout-modal"
-    :visible.sync="dialog"
+    v-model:visible="dialog"
     :style="{ width: '366px' }"
     :modal="true"
     :closable="false"

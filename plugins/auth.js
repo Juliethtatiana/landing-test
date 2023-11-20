@@ -1,5 +1,5 @@
 export default defineNuxtPlugin(() => {
-  addRouteMiddleware(
+  /*addRouteMiddleware(
     'global-middleware',
     (to) => {
       const userData = useOnboarding().getLoginUser
@@ -13,5 +13,5 @@ export default defineNuxtPlugin(() => {
       }
     },
     { global: true },
-  )
+  )*/
 })

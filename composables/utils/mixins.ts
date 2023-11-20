@@ -1,5 +1,6 @@
 import { Ref } from 'vue'
 import moment from 'moment'
+import { useCourses } from '../../stores/Courses'
 
 // interfaces
 interface showAlertI {
@@ -70,4 +71,10 @@ export const formatDate = (date: string, type: string) => {
   }
 
   return dateFormat
+}
+
+export const setCoursesData = (data: any) => {
+  const courses = useCookie<object>('courses-data')
+  courses.value = data
+  useCourses().courses = data
 }
