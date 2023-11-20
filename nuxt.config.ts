@@ -65,6 +65,7 @@ export default defineNuxtConfig({
         'Menu',
         'Dialog',
         'Card',
+        'OrderList',
       ],
     },
   },

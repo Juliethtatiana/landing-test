@@ -1,5 +1,20 @@
 <script setup>
-const props = defineProps(['course'])
+import { useStudents } from '~/stores/Students'
+
+const store = useStudents()
+const props = defineProps(['course', 'students'])
+
+const studentsList = ref({})
+
+onMounted(async () => {
+  if (props.students) {
+    await getStudents(props.course.id)
+  }
+})
+
+const getStudents = async (idCourse) => {
+  studentsList.value = await store.getStudentsByCourse(idCourse)
+}
 </script>
 
 <template>
@@ -20,7 +35,27 @@ const props = defineProps(['course'])
           repellat libero asperiores earum nam nobis, culpa ratione quam
           perferendis esse, cupiditate neque quas!
         </p>
-        <div></div>
+        <div v-if="studentsList.students" class="my-4">
+          <OrderList
+            v-model="studentsList.students"
+            listStyle="height:auto"
+            dataKey="id"
+          >
+            <template #header> List of Students </template>
+            <template #item="slotProps">
+              <div class="flex flex-wrap p-2 align-items-center gap-3">
+                <img
+                  class="w-4rem shadow-2 flex-shrink-0 border-round"
+                  :src="'https://primefaces.org/cdn/primevue/images/product/'"
+                  :alt="slotProps.item.img"
+                />
+                <div class="flex-1 flex flex-column gap-2">
+                  <span class="font-bold">{{ slotProps.item.name }}</span>
+                </div>
+              </div>
+            </template>
+          </OrderList>
+        </div>
       </template>
     </Card>
   </div>

@@ -2,8 +2,8 @@
 <template>
   <div class="app-wraper">
     <nav class="nav-application">
-      <a href="">About</a>
-      <a href="">Services</a>
+      <a href="/about">About</a>
+      <a href="/services">Services</a>
     </nav>
     <div class="content-application">
       <slot />

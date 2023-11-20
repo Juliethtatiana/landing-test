@@ -1,0 +1,44 @@
+[
+  {
+    "idCourse": 1,
+    "students": [
+      {
+        "name": "Patricia Marquez",
+        "age": 17
+      },
+      {
+        "name": "Pedro Herrera",
+        "age": 21
+      },
+      {
+        "name": "Anguie Martinez",
+        "age": 18
+      },
+      {
+        "name": "Salome Rodriguez",
+        "age": 17
+      }
+    ]
+  },
+  {
+    "idCourse": 2,
+    "students": [
+      {
+        "name": "Celeste Perez",
+        "age": 20
+      },
+      {
+        "name": "Pedro Herrera",
+        "age": 21
+      },
+      {
+        "name": "Jose Sanchez",
+        "age": 19
+      },
+      {
+        "name": "Marta Gomez",
+        "age": 22
+      }
+    ]
+  }
+]
